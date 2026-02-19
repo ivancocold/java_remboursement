@@ -13,7 +13,7 @@ Pour cloner ce projet, exécutez la ligne de commande suivante
 git clone https://github.com/ivancocold/de2_java_remboursement
 ```
 
-Le scipt sql permet de créer la base de données sur MySQL.
+Le script sql permet de créer la base de données sur MySQL.
 
 
 ## Description du programme

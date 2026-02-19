@@ -30,9 +30,9 @@ public class processcsv
     // Variables de configuration
 
     //Chemin vers le dossier de recherche des CSV
-    public static final String DIRECTORY_PATH = "D:/Dossier Personnel/Etudes/TSE/DE2/programmation_orientée_objet/magagi_projet_final";
+    public static final String DIRECTORY_PATH = "D:\projets\java\java_remboursement";
     //Dossier d'archivage des fichiers traités
-    public static final String ARCHIVE_DIRECTORY = "D:/Dossier Personnel/Etudes/TSE/DE2/programmation_orientée_objet";
+    public static final String ARCHIVE_DIRECTORY = "D:\projets\java\java_remboursement";
 
     public static void processCsvFile(File file) throws IOException, CsvException, SQLException
     {
