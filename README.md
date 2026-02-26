@@ -1,6 +1,6 @@
-# Projet final de programmation orientée objet avec Java, DE2
+# Projet de programmation orientée objet avec Java
 
-Ce projet a été réalisé dans le cadre du module de programmation orientée objet avec java. Il a pour principaux objectifs de :
+Ce projet a été réalisé dans le cadre de l'apprentissage de la programmation orientée objet avec java. Il a pour principaux objectifs de :
 - mettre en application les acquis du module de manière générale.
 - développer un programme exécutable en mode bash.
 - mettre en place une programme qui exécute des requêtes sur une base de données relationnelles.
@@ -17,10 +17,7 @@ Le script sql permet de créer la base de données sur MySQL.
 
 
 ## Description du programme
-Le programme parcourt un dossier donné et recherche les fichiers csv nommés sous un format spécifié ("users_<YYYYMMDDHHmmSS>.csv").
-Il parse ce fichier à la recherche des colonnes dont l'en-tête est au format <Numero_Securite_Sociale>, <Nom>, <Prenom>, <Date_Naissance>, <Numero_Telephone>, <E_Mail>, <ID_Remboursement>, <Code_Soin>, <Montant_Remboursement>.
-Il insère les lignes de ce fichier dans une base de données MySQL si l'ID_remboursement n'y était pas déjà présent, si non il actualise les lignes dont l'ID est déjà renseigné.
-Après avoir géré un fichier, le programme le déplace pour l'archiver dans un dossier renseigné préalablement.
+Le programme parcourt un dossier donné et recherche les fichiers csv nommés sous un format spécifié ("users_<YYYYMMDDHHmmSS>.csv"). Il parse ce fichier à la recherche des colonnes dont l'en-tête est au format <Numero_Securite_Sociale>, <Nom>, <Prenom>, <Date_Naissance>, <Numero_Telephone>, <E_Mail>, <ID_Remboursement>, <Code_Soin>, <Montant_Remboursement>. Il insère les lignes de ce fichier dans une base de données MySQL si l'ID_remboursement n'y était pas déjà présent, si non il actualise les lignes dont l'ID est déjà renseigné. Après avoir géré un fichier, le programme le déplace pour l'archiver dans un dossier renseigné préalablement.
 
 ## Description des classes
 5 classes ont été développées dans ce projet.
@@ -28,7 +25,8 @@ Après avoir géré un fichier, le programme le déplace pour l'archiver dans un
 2. processcsv : gère les méthodes et objets permettant de parser un dossier à la recherche d'un fichier de notre choix et d'en extraire les données nécessaires.
 3. removefile : permet de déplacer le fichier qui vient d'être géré.
 4. main : permet de lancer et exécuter le programme en faisant intéragir les différentes classes. Elle lance notamment la recherche des fichiers à traiter dans un dossier spécifié. Elle applique aux fichiers d'intérêt différentes méthodes développées dans les différentes autres classes.
-5. test : implémente les tests unitaires avec les framework JUnit et Mockito.
+5. test : implémente les tests unitaires avec les frameworks JUnit et Mockito.
+
 
 ## Variables à actualiser
 La portabilité de ce projet est assurée par l'usage de variables de configuration. Classe par classe, nous retrouvons les variables suivantes:
@@ -40,17 +38,20 @@ La portabilité de ce projet est assurée par l'usage de variables de configurat
 * public static final String DB_USER: nom d'utilisateur.
 * public static final String DB_PASSWORD: mot de passe.
 
+
 2. processcsv :
 * public static final String DIRECTORY_PATH: chemin vers le dossier de recherche des CSV.
 * public static final String ARCHIVE_DIRECTORY: dossier d'archivage des fichiers traités.
 
+
 3. test: j'ai utilisé des données factices pour réaliser mes tests. Vous pouvez les adapter à votre bon vouloir. Les commentaires du code vous guideront sur les modifications à réaliser.
 
+
 ## Choix des technologies utilisées
-1. MySQL : MySQL est un serveur de base données relationneles très pratique. Etant donné que j'ai déjà réalisé un projet java - oracle et que j'essaie de monter en compétence sur MySQL depuis quelques mois, j'ai fait le choix de la sécurité et de la maitrise, d'autant que le projet java est tombé sur une période critique (plusieurs examens et projets à rendre en si peu de temps). Enfin, mon ordinateur a des ressources limitées et devoir installer un nouveau Système de Gestion de Base de Données Relationnelles aurait causer quelques difficultés.
-MySQL a une grande documentation et une communauté assez large en cas d'un éventuel besoin d'aide.
+1. MySQL : MySQL est un serveur de base données relationnelles très pratique. Etant donné que j'ai déjà réalisé un projet java - oracle, j'ai fait le choix de la sécurité et de la maitrise. MySQL a une grande documentation et une communauté assez large en cas d'un éventuel besoin d'aide.
 
 2. IntelliJ IDEA 2024.1.2 : le choix d'intelliJ est assez annecdotique. On peut utiliser n'importe quel autre IDE java.
+
 
 ## Choix des principales bibliothèques et frameworks utilisés
 1. slf4j-api et logback-classic : permettent de gérer la gestion des exceptions avec un logging robuste.
@@ -73,6 +74,7 @@ La paire mockito-core et junit m'apportent une série d'avantages pour l'écritu
 5. java.io : package fondamental de la bibliothèque standard Java qui me sert dans la manipulation des fichiers et des répertoires, notamment à travers sa classe File, FileReader et FileWriter. Il a l'avantage de ne pas requérir l'utilisation davantage de dépendances.
 
 Il existe d'autres packages que j'ai utilisés et dont le détail est donné dans les commentaires du code.
+
 
 ## Tests unitaires réalisés
 
